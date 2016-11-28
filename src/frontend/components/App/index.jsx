@@ -4,7 +4,9 @@ const React = require('react');
 
 function App(props) {
 	const { output, runCommand } = props;
-	const outputChildren = output.map(o => <li key={o.id} className="output__item"><pre>{o.value}</pre></li>);
+	const outputChildren = output.map(function(o) {
+		return <li key={o.id} className={`output__item line_${o.type}`}><pre>{o.value}</pre></li>
+	});
 
 	return (
 		<div className="terminal">
