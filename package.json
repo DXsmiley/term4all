@@ -4,8 +4,8 @@
   "description": "A cross-platform terminal emulator for everyone",
   "main": "dist/backend/server.js",
   "scripts": {
-    "build": "./tasks/build.sh",
-    "build-tests": "./tasks/build-tests.sh",
+    "build": "bash ./tasks/build.sh",
+    "build-tests": "bash ./tasks/build-tests.sh",
     "dev": "npm run build && node dist/backend/server",
     "electron": "npm run build && electron dist/electron",
     "test": "mocha src/**/*-tests.js"
